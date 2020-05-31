@@ -1,0 +1,381 @@
+* {
+  margin: 0;
+}
+
+body {
+  background-color: #8f57fd;
+  font-family: "Muli", sans-serif;
+  font-weight: 600;
+  color: white;
+}
+
+.body-login {
+  background: linear-gradient(#21c08b, #8f57fd);
+}
+
+.header {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__nav {
+  margin-right: 28px;
+}
+
+.header__img--logo {
+  height: 85%;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.header__nav--profile {
+  margin: 10px;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.header__nav--profile img {
+  height: 50px;
+  margin-right: 5px;
+}
+
+.header__ul li {
+  margin: 7px 0;
+}
+
+.header__ul li a:hover {
+  text-decoration: underline;
+}
+
+.header__ul li:first-child {
+  margin: 2px 0;
+}
+
+.header__ul a {
+  color: white;
+  text-decoration: none;
+  margin: 7px 0;
+}
+
+.header__ul ul {
+  display: none;
+  position: absolute;
+  list-style: none;
+  padding: 0;
+  text-align: right;
+}
+
+.header__nav:hover ul,
+.header__ul:hover ul {
+  display: block;
+}
+
+.busqueda {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-input {
+  font-family: "Muli", sans-serif;
+  font-size: 17px;
+  border: 2px solid white;
+  border-radius: 30px;
+  height: 40px;
+  width: 70%;
+  padding: 2px 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-top: 25px;
+  outline: none;
+  color: white;
+}
+
+::placeholder {
+  color: white;
+  margin: auto;
+}
+
+.mi-lista-home {
+  padding: 10px 0 0 10px;
+  font-size: 19px;
+}
+
+.carrusel-contenedor-accion,
+.carrusel-contenedor-drama,
+.carrusel-contenedor-animation {
+  width: max-content;
+  margin: 60px 0px 0px 0;
+  padding-bottom: 60px;
+}
+
+.carrusel {
+  overflow: auto;
+  padding: 0 30px;
+  position: relative;
+  margin: 20px 0;
+}
+
+.carrusel::-webkit-scrollbar {
+  height: 10px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.carrusel::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 7px;
+}
+
+.carrusel-item {
+  background-color: black;
+  border-radius: 25px;
+  height: 250px;
+  width: 200px;
+  overflow: hidden;
+  display: inline-block;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: 450ms all;
+  transform-origin: center left;
+  position: relative;
+}
+
+.carrusel-item:hover ~ .carrusel-item {
+  transform: translate3d(100px, 0, 0);
+}
+
+.carrusel-contenedor-accion:hover .carrusel-item,
+.carrusel-contenedor-drama:hover .carrusel-item,
+.carrusel-contenedor-animation:hover .carrusel-item {
+  opacity: 0.3;
+}
+
+.carrusel-contenedor-accion:hover .carrusel-item:hover,
+.carrusel-contenedor-drama:hover .carrusel-item:hover,
+.carrusel-contenedor-animation:hover .carrusel-item:hover {
+  transform: scale(1.5);
+  opacity: 1;
+}
+
+.details {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0) 110%
+  );
+  font-size: 15px;
+  position: absolute;
+  transition: opacity 450ms;
+  opacity: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+}
+
+.carrusel-item:hover .details {
+  opacity: 1;
+}
+
+.carrusel--img--details img {
+  width: 15%;
+}
+
+/* LOGIN SECCION */
+.login-main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login {
+  border: 3px solid white;
+  padding: 80px 50px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px 0px #0000008c;
+  width: 31%;
+  min-height: calc(100vh - 200px);
+  margin-top: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.form-email,
+.form-password,
+.form-button {
+  display: block;
+  text-align: center;
+  margin: 35px auto;
+}
+
+.form-details {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#recuerdame {
+  width: auto;
+}
+
+.login h2 {
+  margin: 30px auto;
+  text-align: left;
+  font-weight: bold;
+}
+
+.login input {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: left;
+  width: 90%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1.5px solid white;
+  padding: 10px;
+  outline: none;
+  font-family: "Muli", sans-serif;
+  font-size: 1em;
+  color: white;
+}
+
+.form-details a {
+  color: white;
+}
+
+.form-button {
+  font-family: "Muli", sans-serif;
+  font-size: 1em;
+  width: 95%;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: none;
+  padding: 10px 50px;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+  margin-bottom: 40px;
+}
+
+.form-button a {
+  font-size: 1em;
+  font-family: "Muli", sans-serif;
+  color: white;
+  text-decoration: none;
+}
+
+.rrss {
+  margin: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.rrss-wrapper {
+  display: flex;
+  align-items: center;
+  margin: 7px 0;
+}
+
+.rrss a {
+  color: white;
+  text-decoration: none;
+}
+
+.sign-up {
+  margin: 15px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.sign-up a {
+  color: white;
+}
+
+.footer a {
+  margin: 20px;
+  color: white;
+}
+
+footer {
+  margin: 35px 0 10px 0;
+}
+
+@media only screen and (max-width: 800px) {
+  .login {
+    border: none;
+    width: 100%;
+    background-color: transparent;
+    box-shadow: none;
+    padding: 20px 15px;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    justify-content: left;
+    margin: 0;
+  }
+
+  .footer a {
+    margin: 2px;
+  }
+}
+/* Pantalla de Error 404 */
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 75vh;
+}
+
+.error h1 {
+  font-size: 3.5em;
+}
+
+.animated {
+  animation-delay: 2s;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+
+@keyframes hinge {
+  0% {
+    transform: rotate(0);
+    transform-origin: top left;
+    animation-timing-function: ease-in-out;
+  }
+  20%,
+  60% {
+    transform: rotate(80deg);
+    transform-origin: top left;
+    animation-timing-function: ease-in-out;
+  }
+  40% {
+    transform: rotate(60deg);
+    transform-origin: top left;
+    animation-timing-function: ease-in-out;
+  }
+  80% {
+    transform: rotate(60deg) translateY(0);
+    transform-origin: top left;
+    animation-timing-function: ease-in-out;
+  }
+  100% {
+    transform: translateY(700px);
+  }
+}
+.hinge {
+  margin: 20px;
+  animation-name: hinge;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Platzi Video</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Muli&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <img
+        class="header__img--logo"
+        src="img/logo-platzi-video-BW2.png"
+        alt="Platzi Video Logo"
+      />
+      <div class="header__nav">
+        <div class="header__nav--profile">
+          <img src="img/icons8-usuario-círculo-64.png" />
+          <p>Perfil</p>
+        </div>
+        <div class="header__ul">
+          <ul>
+            <li>
+              <a href="login.html" target="_blank">Cuenta</a>
+            </li>
+            <li><a href="login.html">Cerrar Sección</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main id="home">
+      <section class="busqueda">
+        <h2>¿Qué deseas ver hoy?</h2>
+        <input class="home-input" type="text" placeholder="Busca Aquí..." />
+      </section>
+      <section class="carrusel">
+        <div>
+          <h2 class="mi-lista-home">Mi lista</h2>
+        </div>
+        <div class="carrusel-contenedor-accion"></div>
+      </section>
+
+      <section class="carrusel">
+        <div>
+          <h2 class="mi-lista-home">Tendencias</h2>
+        </div>
+        <div class="carrusel-contenedor-drama"></div>
+      </section>
+
+      <section class="carrusel">
+        <div>
+          <h2 class="mi-lista-home">Favoritos</h2>
+        </div>
+        <div class="carrusel-contenedor-animation"></div>
+      </section>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
